@@ -51,7 +51,7 @@ header{position:sticky;top:0;z-index:50;background:var(--red);color:var(--cream)
 .kq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
 .kq{display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
 .kq:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(126,42,19,.15)}
-.kq img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block;background:var(--cream);border-bottom:2px solid var(--line)}
+.kq img{width:100%;aspect-ratio:16/10;object-fit:contain;object-position:center;display:block;background:#fff;padding:6px;border-bottom:2px solid var(--line)}
 .kq-in{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:14px 16px}
 .kq-in b{font-size:16px;color:var(--deep);letter-spacing:.02em}
 .kq-in .lv{grid-column:1;color:var(--red);font-weight:700;font-size:14px}
