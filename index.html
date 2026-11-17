@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiếng Trung Dolin · Dạy tiếng Trung từ tâm</title>
+<meta name="description" content="Tiếng Trung Dolin: lớp tiếng Trung online qua Zoom, lộ trình HSK3 3.0 và HSK4, sĩ số tối đa 8 học viên, cô Dương Linh trực tiếp giảng dạy.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#A33A1E;--deep:#7E2A13;--orange:#E8A44C;--cream:#FCF0DC;--gold:#FFD36B;--line:#EBC9A0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--deep);line-height:1.55}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.serif{font-family:'Noto Serif',serif}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:var(--red);color:var(--cream);box-shadow:0 2px 12px rgba(80,20,5,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:50%;background:var(--cream);padding:2px}
+.brand b{font-family:'Noto Serif',serif;font-size:20px}
+.menu{display:flex;gap:26px;font-weight:600;font-size:15px}
+.menu a{text-decoration:none;opacity:.92}
+.menu a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);font-weight:800;text-decoration:none;padding:11px 20px;border-radius:999px;font-size:15px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border:2px solid var(--gold)}
+@media(max-width:860px){.menu{display:none}}
+
+/* hero */
+.hero{background:var(--red);color:var(--cream);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;gap:24px;min-height:560px}
+.hero .txt{padding:64px 0 72px}
+.kicker{color:var(--orange);font-weight:700;letter-spacing:.3em;font-size:14px;text-transform:uppercase}
+.hero h1{font-family:'Noto Serif',serif;font-size:clamp(40px,6vw,68px);line-height:1.08;margin:14px 0 16px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:18px;max-width:520px;opacity:.95}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px}
+.facts div{font-size:14px;opacity:.9}
+.facts b{display:block;font-family:'Noto Serif',serif;font-size:30px;color:var(--gold);line-height:1.1}
+.hero .pic{align-self:end;justify-self:center;max-width:420px;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero .txt{padding:44px 0 8px}.hero .pic{max-width:300px}}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-head .kicker{color:var(--red)}
+.sec-head h2{font-family:'Noto Serif',serif;font-size:clamp(30px,4vw,42px);line-height:1.2;margin-top:10px}
+.sec-head p{margin-top:12px;font-size:17px;opacity:.85}
+.pill{display:inline-block;background:var(--red);color:var(--gold);font-weight:800;font-size:14px;letter-spacing:.06em;padding:6px 16px;border-radius:999px}
+
+/* teacher */
+.teacher{display:grid;grid-template-columns:360px 1fr;gap:44px;align-items:start}
+.t-card{background:var(--red);color:var(--cream);border-radius:28px;overflow:hidden;position:sticky;top:96px}
+.t-card .ph{background:linear-gradient(180deg,var(--orange),var(--red));padding-top:20px}
+.t-card .ph img{margin:0 auto;max-height:380px;width:auto;-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+.t-card .info{padding:20px 26px 26px}
+.t-card h3{font-family:'Noto Serif',serif;font-size:32px}
+.t-card .cn{font-family:'Songti SC','STSong','Noto Serif SC',serif;font-weight:900;font-size:28px;color:var(--gold);letter-spacing:.12em}
+.t-card .role{margin-top:6px;opacity:.9}
+.list{list-style:none;counter-reset:n}
+.list li{counter-increment:n;display:flex;gap:16px;padding:15px 0;border-bottom:2px dashed var(--line);font-size:17px}
+.list li:last-child{border-bottom:none}
+.list li:before{content:counter(n);flex:none;width:34px;height:34px;border-radius:50%;background:var(--orange);font-family:'Noto Serif',serif;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:-2px}
+.list b{color:var(--red)}
+@media(max-width:860px){.teacher{grid-template-columns:1fr}.t-card{position:static;max-width:420px;margin:0 auto}}
+
+/* center */
+.center{background:var(--red);color:var(--cream)}
+.center .sec-head .kicker{color:var(--orange)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.f{border:2px solid var(--orange);border-radius:22px;padding:24px}
+.f .ic{font-family:'Noto Serif',serif;font-size:34px;font-weight:800;color:var(--gold);line-height:1}
+.f h3{color:var(--orange);font-size:18px;font-weight:800;margin:10px 0 6px;letter-spacing:.02em}
+.f p{font-size:16px;opacity:.95}
+.f.hl{background:var(--orange);color:var(--deep);border-color:var(--gold)}
+.f.hl h3,.f.hl .ic{color:var(--deep)}
+@media(max-width:860px){.feat{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feat{grid-template-columns:1fr}}
+
+/* courses */
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:30px;flex-wrap:wrap}
+.tab{border:2px solid var(--red);background:transparent;color:var(--red);font:800 16px 'Be Vietnam Pro';padding:10px 24px;border-radius:999px;cursor:pointer}
+.tab.on{background:var(--red);color:var(--gold)}
+.course{display:none}
+.course.on{display:block}
+.c-top{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.box{background:#fff;border-radius:26px;padding:28px;box-shadow:0 6px 24px rgba(126,42,19,.08)}
+.box h3{font-family:'Noto Serif',serif;font-size:28px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.meta span{background:var(--cream);font-weight:700;font-size:14px;padding:5px 12px;border-radius:999px}
+.out{margin-top:10px;font-weight:700;color:var(--red)}
+.stage{margin-top:20px}
+.stage .hd{display:flex;justify-content:space-between;align-items:baseline;font-weight:800}
+.stage .hd b{font-family:'Noto Serif',serif;font-size:20px}
+.stage .hd span{color:var(--red);font-family:'Noto Serif',serif;font-size:20px}
+.bar{display:flex;height:40px;border-radius:12px;overflow:hidden;margin-top:8px;font-weight:700;font-size:14px}
+.bar div{display:flex;align-items:center;justify-content:center;white-space:nowrap;padding:0 8px;overflow:hidden}
+.k4{background:var(--orange)} .gt{background:var(--gold);border-left:3px solid #fff} .pa{background:#F3C27A} .ld{background:var(--red);color:var(--gold);border-left:3px solid #fff}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:13px;font-weight:700;padding:4px 11px;border-radius:999px;background:#F6DEC0}
+.chip.hot{background:var(--red);color:var(--gold)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:14px;font-weight:600}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+.tests{display:grid;gap:12px;align-content:start}
+.tests div{border:2px solid var(--line);border-radius:18px;padding:14px 16px}
+.tests b{font-family:'Noto Serif',serif;color:var(--red);font-size:20px;display:block}
+.tests small{font-size:15px}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.p{border-radius:24px;padding:24px;position:relative}
+.p.a{background:var(--gold)} .p.b{background:var(--orange)} .p.c{background:#fff;border:3px dashed var(--red)}
+.p h4{font-size:16px;font-weight:800;letter-spacing:.03em}
+.p .big{font-family:'Noto Serif',serif;font-size:34px;font-weight:800;color:var(--red);line-height:1.15;margin-top:6px}
+.p .old{text-decoration:line-through;opacity:.65;font-weight:600;font-size:15px}
+.p .save{display:inline-block;background:var(--red);color:var(--cream);font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px;margin-top:6px}
+.p .rb{position:absolute;top:-12px;right:16px;background:var(--red);color:var(--gold);font-weight:800;font-size:13px;padding:4px 10px;border-radius:8px}
+.p .sm{font-size:15px;margin-top:8px}
+.p .sm b{font-family:'Noto Serif',serif;color:var(--red);font-size:22px;display:block}
+@media(max-width:860px){.c-top,.price{grid-template-columns:1fr}.bar{font-size:12px}}
+
+/* rules */
+details{background:#fff;border-radius:20px;padding:4px 24px;margin-bottom:14px;box-shadow:0 4px 16px rgba(126,42,19,.06)}
+summary{cursor:pointer;font-weight:800;font-size:18px;padding:16px 0;list-style:none;display:flex;justify-content:space-between}
+summary:after{content:"+";color:var(--red);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details .list{padding-bottom:10px}
+
+/* contact */
+.contact{background:var(--red);color:var(--cream);text-align:center}
+.contact h2{font-family:'Noto Serif',serif;font-size:clamp(30px,4vw,44px)}
+.contact p{opacity:.9;margin-top:10px}
+.ways{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:30px}
+.way{background:var(--cream);color:var(--deep);border-radius:20px;padding:18px 26px;text-decoration:none;min-width:240px}
+.way small{display:block;color:var(--red);font-weight:800;letter-spacing:.08em;font-size:13px}
+.way b{font-size:19px}
+footer{background:var(--deep);color:var(--cream);text-align:center;padding:22px 20px;font-size:14px;opacity:.95}
+
+/* mobile fixes */
+html,body{overflow-x:hidden}
+.hero .wrap>*,.teacher>*,.c-top>*,.price>*,.feat>*{min-width:0}
+.bar div{min-width:0;text-overflow:ellipsis}
+@media(max-width:560px){
+  .nav .btn{padding:8px 14px;font-size:13px}
+  .brand b{font-size:17px}
+  .hero .pic{max-width:240px}
+  .facts{gap:18px}.facts b{font-size:24px}
+  section{padding:60px 0}
+  .box{padding:20px}
+  .bar{font-size:11px}
+  .way{min-width:0;width:100%}
+}
+
+/* zalo */
+.ask{margin-top:22px;background:var(--red);color:var(--cream);border-radius:24px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.ask b{display:block;font-family:'Noto Serif',serif;font-size:22px;color:var(--gold)}
+.ask span{font-size:16px;opacity:.95}
+.zbtn{white-space:nowrap}
+.zfloat{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:#0068FF;color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:12px 18px 12px 12px;border-radius:999px;box-shadow:0 6px 20px rgba(0,60,160,.35)}
+.zfloat i{width:34px;height:34px;border-radius:50%;background:#fff;color:#0068FF;font-style:normal;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center}
+.zfloat:hover{transform:translateY(-2px)}
+.way.zalo{background:var(--gold)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="logo.png" alt="Logo Tiếng Trung Dolin"><b>Tiếng Trung Dolin</b></a>
+    <nav class="menu">
+      <a href="#giang-vien">Giảng viên</a>
+      <a href="#trung-tam">Trung tâm</a>
+      <a href="#khoa-hoc">Khoá học</a>
+      <a href="#quy-dinh">Quy định</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+    <a class="btn" href="https://zalo.me/0963181951" target="_blank" rel="noopener">Đăng ký học</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="txt">
+      <div class="kicker">Tiếng Trung Dolin</div>
+      <h1>Dạy tiếng Trung <em>từ tâm</em>,<br>học chắc từ con số 0</h1>
+      <p>Lớp online qua Zoom, sĩ số tối đa 8 học viên. Cô Dương Linh trực tiếp đứng lớp 100% buổi học, cam kết đầu ra cho từng khoá.</p>
+      <div class="cta">
+        <a class="btn" href="#khoa-hoc">Xem khoá học</a>
+        <a class="btn ghost" href="https://zalo.me/0963181951" target="_blank" rel="noopener">Tư vấn qua Zalo</a>
+      </div>
+      <div class="facts">
+        <div><b>2019</b>giảng dạy từ năm</div>
+        <div><b>≤ 8</b>học viên mỗi lớp</div>
+        <div><b>100%</b>cô Linh đứng lớp</div>
+      </div>
+    </div>
+    <img class="pic" src="co-linh.png" alt="Cô Dương Linh">
+  </div>
+</div>
+
+<section id="giang-vien">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Giảng viên</div><h2>Đôi nét về cô Dương Linh</h2></div>
+    <div class="teacher">
+      <div class="t-card">
+        <div class="ph"><img src="co-linh.png" alt="Cô Dương Linh"></div>
+        <div class="info"><h3>Dương Linh</h3><div class="cn">杨老师</div><div class="role">Sáng lập &amp; giảng viên Tiếng Trung Dolin</div></div>
+      </div>
+      <ol class="list">
+        <li><span><b>Nghiên cứu sinh Tiến sĩ</b> Trường Đại học Sư phạm Nam Kinh, Trung Quốc (thuộc nhóm 211, top 5 trường sư phạm cả nước).</span></li>
+        <li><span><b>Thạc sĩ</b> chuyên ngành Lý luận và phương pháp giảng dạy tiếng Trung Quốc, Trường Đại học Ngoại ngữ, ĐHQG Hà Nội.</span></li>
+        <li><span><b>Cử nhân song ngành</b> Ngôn ngữ Trung Quốc và Sư phạm tiếng Anh, Trường Đại học Ngoại ngữ, ĐHQG Hà Nội.</span></li>
+        <li><span>Sử dụng thành thạo hai ngoại ngữ: <b>tiếng Anh và tiếng Trung</b>.</span></li>
+        <li><span>Đạt <b>HSK 6 &amp; HSKK Cao cấp</b>.</span></li>
+        <li><span>Giảng dạy tiếng Trung <b>từ năm 2019 đến nay</b>, với hàng nghìn học viên khắp cả nước.</span></li>
+        <li><span>Đào tạo tiếng Trung từ sơ cấp đến cao cấp, chuyên <b>luyện phát âm chuẩn</b>.</span></li>
+        <li><span>Nhiều học viên đạt <b>điểm cao</b> trong các kỳ thi HSK và HSKK.</span></li>
+        <li><span>Vững chuyên môn và <b>nghiệp vụ sư phạm</b>.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="center" id="trung-tam">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Trung tâm</div><h2>Vì sao chọn Tiếng Trung Dolin?</h2><p>Được sáng lập bởi cô Dương Linh, chuyên đào tạo tiếng Trung từ sơ cấp đến cao cấp.</p></div>
+    <div class="feat">
+      <div class="f"><div class="ic">Cam kết</div><h3>CAM KẾT ĐẦU RA</h3><p>Không đạt, học lại miễn phí cả khoá (nghỉ ≤ 10% số buổi, thiếu ≤ 10% bài tập).</p></div>
+      <div class="f"><div class="ic">100%</div><h3>CÔ LINH TRỰC TIẾP DẠY</h3><p>Tất cả các lớp đều do cô Dương Linh trực tiếp giảng dạy.</p></div>
+      <div class="f"><div class="ic">≤ 8</div><h3>SĨ SỐ NHỎ</h3><p>Tối đa 8 học viên/lớp, chú trọng và chỉnh phát âm cho từng bạn.</p></div>
+      <div class="f"><div class="ic">Zoom</div><h3>HỌC ONLINE</h3><p>Mỗi buổi 1,5 tiếng qua Zoom. Có video bài học gửi vào nhóm lớp sau mỗi buổi.</p></div>
+      <div class="f"><div class="ic">PDF</div><h3>TÀI LIỆU ĐẦY ĐỦ</h3><p>Tặng giáo trình PDF, sách bài tập, file nghe và giấy luyện viết chữ Hán.</p></div>
+      <div class="f hl"><div class="ic">Web</div><h3>WEBSITE ÔN TẬP</h3><p>Ôn tổng hợp, làm đề thi thử ngay trên web. Mở điện thoại là học, mọi lúc mọi nơi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="khoa-hoc">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Khoá học</div><h2>Lộ trình rõ ràng, kiểm tra sát sao</h2><p>Buổi 4 kỹ năng nghe · nói · đọc · viết đã gồm luyện giao tiếp, cộng thêm buổi giao tiếp riêng.</p></div>
+    <div class="tabs">
+      <button class="tab on" data-c="hsk3">HSK3 3.0 · 69 buổi</button>
+      <button class="tab" data-c="hsk4">HSK 4 · 37 buổi</button>
+    </div>
+
+    <!-- HSK3 -->
+    <div class="course on" id="hsk3">
+      <div class="c-top">
+        <div class="box">
+          <span class="pill">TỪ CON SỐ 0</span>
+          <h3 style="margin-top:12px">HSK3 3.0 · 69 buổi</h3>
+          <div class="meta"><span>Mỗi buổi 1,5 tiếng</span><span>Online qua Zoom</span><span>Tối đa 8 học viên</span></div>
+          <div class="out">Đầu ra: HSK 3 (3.0) + HSKK sơ cấp + (tiền) trung cấp</div>
+          <div class="stage"><div class="hd"><b>Phát âm</b><span>6 buổi</span></div>
+            <div class="bar"><div class="pa" style="flex:1">6 buổi luyện phát âm chuẩn</div></div></div>
+          <div class="stage"><div class="hd"><b>HSK 1</b><span>19 buổi</span></div>
+            <div class="bar"><div class="k4" style="flex:17">17 buổi 4 kỹ năng</div><div class="gt" style="flex:6">2 buổi giao tiếp</div></div>
+            <div class="chips"><span class="chip">Kiểm tra chữ mỗi 5 bài</span><span class="chip">Thi giữa kì</span><span class="chip hot">Cuối kì + đề HSK 1 + HSKK</span></div></div>
+          <div class="stage"><div class="hd"><b>HSK 2</b><span>19 buổi</span></div>
+            <div class="bar"><div class="k4" style="flex:17">17 buổi 4 kỹ năng</div><div class="gt" style="flex:6">2 buổi giao tiếp</div></div>
+            <div class="chips"><span class="chip">Kiểm tra chữ mỗi 5 bài</span><span class="chip">Thi giữa kì</span><span class="chip hot">Cuối kì + đề HSK 2 + HSKK</span></div></div>
+          <div class="stage"><div class="hd"><b>HSK 3</b><span>25 buổi</span></div>
+            <div class="bar"><div class="k4" style="flex:22">22 buổi 4 kỹ năng</div><div class="gt" style="flex:7">3 buổi giao tiếp</div></div>
+            <div class="chips"><span class="chip">Kiểm tra chữ mỗi 5 bài</span><span class="chip">Thi giữa kì</span><span class="chip hot">Cuối kì + đề HSK 3 + HSKK</span></div></div>
+          <div class="legend"><span><i class="pa"></i>Phát âm</span><span><i class="k4"></i>4 kỹ năng (đã gồm luyện giao tiếp)</span><span><i class="gt"></i>Giao tiếp riêng</span></div>
+        </div>
+        <div class="tests">
+          <div><b>5 bài</b><small>Cứ sau 5 bài kiểm tra chữ 1 lần, nhớ mặt chữ chắc tay.</small></div>
+          <div><b>Giữa kì</b><small>Ôn lại nửa chặng, biết ngay phần nào cần bù.</small></div>
+          <div><b>Cuối kì + HSK + HSKK</b><small>Làm đề HSK và HSKK đúng trình độ, tự tin trước khi đi thi.</small></div>
+          <div><b>Website ôn tập</b><small>Ôn tổng hợp và làm đề thi thử trên web bất cứ lúc nào.</small></div>
+        </div>
+      </div>
+      <div class="ask">
+        <div><b>Học phí &amp; ưu đãi</b><span>Nhắn Zalo cho cô Linh để nhận học phí, ưu đãi combo và lịch khai giảng gần nhất.</span></div>
+        <a class="btn zbtn" href="https://zalo.me/0963181951" target="_blank" rel="noopener">Nhắn tin Zalo</a>
+      </div>
+    </div>
+
+    <!-- HSK4 -->
+    <div class="course" id="hsk4">
+      <div class="c-top">
+        <div class="box">
+          <span class="pill">NỐI TIẾP SAU HSK 3</span>
+          <h3 style="margin-top:12px">HSK 4 · 37 buổi</h3>
+          <div class="meta"><span>Mỗi buổi 1,5 tiếng</span><span>Online qua Zoom</span><span>Tối đa 8 học viên</span><span>Tặng giáo trình PDF</span></div>
+          <div class="out">Đầu ra: HSK 4 (3.0) + HSKK trung cấp</div>
+          <div class="stage"><div class="hd"><b>Cấu trúc khoá</b><span>37 buổi</span></div>
+            <div class="bar" style="height:46px"><div class="k4" style="flex:30">30 buổi 4 kỹ năng</div><div class="gt" style="flex:8">5 buổi giao tiếp</div><div class="ld" style="flex:6">2 buổi đề</div></div>
+            <div class="chips"><span class="chip">Kiểm tra chữ mỗi 5 bài</span><span class="chip">Thi giữa kì</span><span class="chip hot">Cuối kì + đề HSK 4 + HSKK</span></div></div>
+          <div class="legend"><span><i class="k4"></i>4 kỹ năng (đã gồm luyện giao tiếp)</span><span><i class="gt"></i>Giao tiếp riêng</span><span><i class="ld"></i>Luyện đề</span></div>
+          <ol class="list" style="margin-top:14px">
+            <li><span><b>30 buổi 4 kỹ năng:</b> nghe, nói, đọc, viết theo giáo trình HSK 4, buổi nào cũng có phần luyện giao tiếp.</span></li>
+            <li><span><b>5 buổi giao tiếp riêng:</b> chỉ nói và phản xạ theo chủ đề đời sống, công việc.</span></li>
+            <li><span><b>2 buổi luyện đề:</b> làm đề HSK 4 có chữa chi tiết, nắm chắc dạng bài trước kì thi.</span></li>
+          </ol>
+        </div>
+        <div class="tests">
+          <div><b>5 bài</b><small>Cứ sau 5 bài kiểm tra chữ 1 lần, nhớ mặt chữ chắc tay.</small></div>
+          <div><b>Giữa kì</b><small>Ôn lại nửa chặng, biết ngay phần nào cần bù.</small></div>
+          <div><b>Cuối kì + HSK + HSKK</b><small>Làm đề HSK 4 và HSKK, tự tin trước khi đi thi.</small></div>
+        </div>
+      </div>
+      <div class="ask">
+        <div><b>Học phí &amp; ưu đãi</b><span>Nhắn Zalo cho cô Linh để nhận học phí, ưu đãi combo và lịch khai giảng gần nhất.</span></div>
+        <a class="btn zbtn" href="https://zalo.me/0963181951" target="_blank" rel="noopener">Nhắn tin Zalo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quy-dinh" style="padding-top:0">
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-head"><div class="kicker">Nội quy lớp học</div><h2>Chuẩn bị đủ · học nghiêm túc</h2></div>
+    <details open>
+      <summary>Đồ dùng học tập cần chuẩn bị</summary>
+      <ol class="list">
+        <li><span><b>Vở ô ly</b> (4 ly hoặc 5 ly) loại <b>siêu dày</b>.</span></li>
+        <li><span><b>Bút viết:</b> bút chì hoặc bút mực / bút chữ A. <b>Không</b> dùng bút bi để viết chữ Hán.</span></li>
+        <li><span><b>Giấy luyện viết chữ Hán</b> và giáo trình phát âm: giáo viên cung cấp bản PDF, học viên tự in.</span></li>
+        <li><span><b>Ứng dụng Zoom:</b> link lớp cố định, gửi 1 lần đầu khoá. Học viên lưu ID và mật khẩu, đến giờ tự vào lớp.</span></li>
+        <li><span><b>Không gian học</b> yên tĩnh, đường truyền ổn định, có tai nghe nếu cần.</span></li>
+      </ol>
+    </details>
+    <details>
+      <summary>Quy định lớp học</summary>
+      <ol class="list">
+        <li><span>Vào muộn hoặc bận không thể tham gia, học viên cần <b>xin phép</b> giáo viên.</span></li>
+        <li><span><b>Video bài học</b> được cô gửi vào nhóm lớp sau mỗi buổi, học viên vui lòng tải về máy để lưu trữ.</span></li>
+        <li><span>Học viên cần <b>nghiêm túc, tập trung</b> trong giờ học.</span></li>
+        <li><span>Hoàn thành bài tập <b>ít nhất 5 tiếng</b> trước buổi học hôm sau.</span></li>
+        <li><span>Chỗ nào chưa hiểu hãy <b>hỏi trực tiếp</b> giáo viên.</span></li>
+        <li><span><b>Không bảo lưu</b>, không nghỉ học giữa chừng (lớp ít học viên).</span></li>
+        <li><span>Bài tập và tài liệu nằm trong link <b>Google Drive</b> của lớp.</span></li>
+        <li><span><b>Website ôn tập</b> của trung tâm có nội dung đầy đủ, đa dạng. Học viên tự giác truy cập để ôn luyện.</span></li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="wrap">
+    <h2>Sẵn sàng bắt đầu?</h2>
+    <p>Nhắn Zalo cho cô Linh để được tư vấn lộ trình, học phí và lịch khai giảng gần nhất.</p>
+    <div class="ways">
+      <a class="way zalo" href="https://zalo.me/0963181951" target="_blank" rel="noopener"><small>NHẮN TIN ZALO</small><b>0963 181 951 →</b></a>
+      <a class="way" href="mailto:duonglinhulis@gmail.com"><small>EMAIL</small><b>duonglinhulis@gmail.com</b></a>
+      <div class="way"><small>FACEBOOK</small><b>Tiếng Trung Dolin</b></div>
+    </div>
+  </div>
+</section>
+
+<a class="zfloat" href="https://zalo.me/0963181951" target="_blank" rel="noopener" aria-label="Nhắn tin Zalo"><i>Zalo</i>Nhắn tin Zalo</a>
+<footer>© Tiếng Trung Dolin · Dạy tiếng Trung từ tâm</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t)});
+    document.querySelectorAll('.course').forEach(function(c){c.classList.toggle('on',c.id===t.dataset.c)});
+  });
+});
+</script>
+</body>
+</html>
